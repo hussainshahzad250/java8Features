@@ -10,19 +10,19 @@ public class A {
 
 	private static SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws ParseException {
 
 		String[] arr = { "12-12-2017", "14-12-2017", "17-12-2017", "21-12-2017", "20-12-2017" };
 		int[] intArr = { 1, 4, 5, 6, 3, 334, 54, 34, 34, 343, 3432, 3242 };
 
-		// maxDateFromList(arr);
+		maxDateFromList(arr);
 		maxInt(intArr);
 
 	}
 
 	private static void maxDateFromList(String[] arr) throws ParseException {
 
-		List<Date> dates = new ArrayList<Date>();
+		List<Date> dates = new ArrayList<>();
 		for (int i = 0; i < arr.length; i++) {
 			dates.add(sdf.parse(arr[i]));
 		}
@@ -32,7 +32,7 @@ public class A {
 	}
 
 	private static void maxInt(int[] intArr) {
-		List<Integer> list = new ArrayList<Integer>();
+		List<Integer> list = new ArrayList<>();
 		for (int i = 0; i < intArr.length; i++) {
 			list.add(intArr[i]);
 		}
